@@ -13,7 +13,7 @@ export default function LandingPage(): JSX.Element {
           <div className="w-4/6 text-center">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">Raven</h1>
             <p className="text-gray-700 leading-relaxed mb-8">
-              This app was built to organize sites I'm web scraping for Notion embeddings.
+              This app was built to organize websites that are getting scraped for Notion embeddings.
             </p>
           </div>
 
