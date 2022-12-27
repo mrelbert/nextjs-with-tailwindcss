@@ -12,9 +12,9 @@ export default function Greatday({ headlines, hyperlinks }: { headlines: string[
           </Head>
     
           <main className="w-full text-center">
-            <h1 className="text-3xl font-bold text-gray-800 mb-4">
+            {/* <h1 className="text-3xl font-bold text-gray-800 mb-4">
                 많이 본 TV연예 뉴스
-            </h1>
+            </h1> */}
             <ul className="text-gray-700 leading-relaxed mb-8">
                 {headlines.map((headline, idx) => (
                     <Link key={idx} href={`https://entertain.naver.com/` + `${hyperlinks[idx]}`}><li className="hover:bg-blue-100" key={idx}>{headline}</li></Link>
