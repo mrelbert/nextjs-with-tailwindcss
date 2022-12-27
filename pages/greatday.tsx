@@ -18,7 +18,7 @@ export default function Greatday({ greatdayQuote, greatdayMessage }: { greatdayQ
             <p className="text-gray-700 leading-relaxed mb-8">
               {greatdayMessage}
             </p>
-            <div className="py-2">
+            {/* <div className="py-2">
                 <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full">
                     <Link href="https://greatday.com/">Visit greatday.com</Link>
                 </button>
@@ -27,7 +27,7 @@ export default function Greatday({ greatdayQuote, greatdayMessage }: { greatdayQ
                 <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full">
                     <Link href="/">Back to home</Link>
                 </button>   
-            </div>
+            </div> */}
           </main>
         </div>
     );

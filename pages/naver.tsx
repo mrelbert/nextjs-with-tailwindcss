@@ -20,7 +20,7 @@ export default function Greatday({ headlines, hyperlinks }: { headlines: string[
                     <Link key={idx} href={`https://entertain.naver.com/` + `${hyperlinks[idx]}`}><li className="hover:bg-blue-100" key={idx}>{headline}</li></Link>
                 ))}
             </ul>
-            <div className="py-2">
+            {/* <div className="py-2">
                 <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full">
                     <Link href="https://entertain.naver.com/home">Visit entertain.naver.com</Link>
                 </button>
@@ -29,13 +29,13 @@ export default function Greatday({ headlines, hyperlinks }: { headlines: string[
                 <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full">
                     <Link href="/">Back to home</Link>
                 </button>   
-            </div>
+            </div> */}
           </main>
         </div>
     );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch("https://entertain.naver.com/home")
   .then((res) => res.text())
   .then((data) => {
