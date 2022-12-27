@@ -12,18 +12,18 @@ export default function Greatday({ greatdayQuote, greatdayMessage }: { greatdayQ
           </Head>
     
           <main className="w-2/3 text-center">
-            <h1 className="text-3xl font-bold text-gray-800 mb-4">
+            <h1 className="text-2xl font-bold text-gray-800 mb-4">
               {greatdayQuote}
             </h1>
-            <p className="text-gray-700 leading-relaxed mb-8">
+            {/* <p className="text-gray-700 leading-relaxed mb-8">
               {greatdayMessage}
-            </p>
-            {/* <div className="py-2">
+            </p> */}
+            <div className="py-2">
                 <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full">
                     <Link href="https://greatday.com/">Visit greatday.com</Link>
                 </button>
             </div>
-            <div>
+            {/* <div>
                 <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full">
                     <Link href="/">Back to home</Link>
                 </button>   
