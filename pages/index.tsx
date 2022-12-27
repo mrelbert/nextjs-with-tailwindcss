@@ -5,15 +5,15 @@ export default function LandingPage(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Landing Page</title>
+        <title>Raven</title>
         <meta name="description" content="Landing page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <div className="p-8 flex flex-col justify-center items-center">
           <div className="w-4/6 text-center">
-            <h1 className="text-3xl font-bold text-gray-800 mb-4">Quotes</h1>
+            <h1 className="text-3xl font-bold text-gray-800 mb-4">Raven</h1>
             <p className="text-gray-700 leading-relaxed mb-8">
-              We offer a wide range of products and services to help you achieve your goals.
+              This app was built to organize sites I'm web scraping for Notion embeddings.
             </p>
           </div>
 
