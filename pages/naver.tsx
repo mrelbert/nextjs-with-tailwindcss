@@ -17,7 +17,7 @@ export default function Greatday({ headlines, hyperlinks }: { headlines: string[
             </h1>
             <ul className="text-gray-700 leading-relaxed mb-8">
                 {headlines.map((headline, idx) => (
-                    <Link href={`https://entertain.naver.com/` + `${hyperlinks[idx]}`}><li className="hover:bg-blue-100" key={headline}>{headline}</li></Link>
+                    <Link key={idx} href={`https://entertain.naver.com/` + `${hyperlinks[idx]}`}><li className="hover:bg-blue-100" key={idx}>{headline}</li></Link>
                 ))}
             </ul>
             <div className="py-2">
