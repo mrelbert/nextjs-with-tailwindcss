@@ -33,7 +33,7 @@ export default function Greatday({ greatdayQuote, greatdayMessage }: { greatdayQ
     );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch("https://greatday.com/")
   .then((res) => res.text())
   .then((data) => {
