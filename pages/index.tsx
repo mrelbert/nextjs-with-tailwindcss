@@ -4,7 +4,7 @@ import WeddingSeatingArrangement from "./tables";
 import Groups from "./api/data.json";
 
 export default function LandingPage(): JSX.Element {
-  const groups: {[key:string]: string[]} = Groups;
+  const groups: {[key: string]: string[]} = Groups;
   return (
     <>
       <Head>
@@ -21,7 +21,7 @@ export default function LandingPage(): JSX.Element {
         </div>
         <hr />  
         <div className="pt-8 grid grid-cols-5 gap-6">
-          {Object.keys(groups).map((table, index) => (
+          {groups && Object.keys(groups).map((table, index) => (
             <div key={index}>
               <WeddingSeatingArrangement
                 tableName={table}
