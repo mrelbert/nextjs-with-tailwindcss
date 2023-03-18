@@ -5,6 +5,7 @@ import Groups from "./api/data.json";
 
 export default function LandingPage(): JSX.Element {
   const groups: {[key: string]: string[]} = Groups;
+
   return (
     <>
       <Head>
@@ -12,16 +13,15 @@ export default function LandingPage(): JSX.Element {
         <meta name="description" content="Landing page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto px-4 pt-12">
-        <h1 className="text-center text-4xl font-bold text-gray-800 mb-2">
+      <div className="container mx-auto px-4 pt-8">
+        <h1 className="text-center text-4xl font-bold text-gray-800 mb-6">
           Table Arrangements
         </h1>
-        <div className="text-center text-lg italic text-gray-500 mb-6 pt-2">
+        <div className="text-center text-lg italic text-gray-500 mb-10">
           Feel free to sit anywhere within your table!
         </div>
-        <hr />  
-        <div className="pt-8 grid grid-cols-5 gap-6">
-          {groups && Object.keys(groups).map((table, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {Object.keys(groups).map((table, index) => (
             <div key={index}>
               <WeddingSeatingArrangement
                 tableName={table}
