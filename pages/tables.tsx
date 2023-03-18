@@ -5,7 +5,7 @@ function WeddingSeatingArrangement({ tableName, tableSeats }: { tableName: strin
     <div>
       <h1><b>{tableName}</b></h1>
       <ul className='py-4'>
-        {tableSeats.map((person, index) => (
+        {tableSeats && tableSeats.map((person, index) => (
           <li key={index}>{person}</li>
         ))}
       </ul>
