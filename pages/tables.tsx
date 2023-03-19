@@ -4,9 +4,9 @@ function WeddingSeatingArrangement({ tableName, tableSeats }: { tableName: strin
   return (
     <div>
       <h1><b>{tableName}</b></h1>
-      <ul className='py-4'>
+      <ul className='py-4 text-xs'>
         {tableSeats && tableSeats.map((person, index) => (
-          <li key={index}>{person}</li>
+          <li className="text-xs" key={index}>{person}</li>
         ))}
       </ul>
     </div>

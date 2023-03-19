@@ -1,8 +1,10 @@
 import Head from "next/head";
+import Link from "next/link";
 import WeddingSeatingArrangement from "./tables";
-import groups from "./api/data.json";
+import Groups from "./api/data.json";
 
 export default function LandingPage(): JSX.Element {
+  const groups: {[key:string]: string[]} = Groups;
   return (
     <>
       <Head>
@@ -10,50 +12,23 @@ export default function LandingPage(): JSX.Element {
         <meta name="description" content="Landing page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="min-h-screen flex flex-row overflow-x-auto scrollable-container">
-        <div className="flex-shrink-0">
-          <h1 className="text-center text-3xl font-bold">Table Arrangements</h1>
-          <div className="text-center text-lg italic">
-            Feel free to sit anywhere within your table!
-          </div>
+      <div className="container mx-auto px-4 pt-12">
+        {/* <h1 className="text-center text-4xl font-bold text-gray-800 mb-2">
+          Table Arrangements
+        </h1>
+        <div className="text-center text-lg italic text-gray-500 mb-6 pt-2">
+          Feel free to sit anywhere within your table!
         </div>
-        <div className="flex-nowrap flex-row flex-grow">
-          <WeddingSeatingArrangement
-            tableName="Table 1"
-            tableSeats={groups["Table 1"]}
-          />
-          <WeddingSeatingArrangement
-            tableName="Table 2"
-            tableSeats={groups["Table 2"]}
-          />
-          <WeddingSeatingArrangement
-            tableName="Table 3"
-            tableSeats={groups["Table 3"]}
-          />
-          <WeddingSeatingArrangement
-            tableName="Table 4"
-            tableSeats={groups["Table 4"]}
-          />
-          <WeddingSeatingArrangement
-            tableName="Table 5"
-            tableSeats={groups["Table 5"]}
-          />
-          <WeddingSeatingArrangement
-            tableName="Table 6"
-            tableSeats={groups["Table 6"]}
-          />
-          <WeddingSeatingArrangement
-            tableName="Table 7"
-            tableSeats={groups["Table 7"]}
-          />
-          <WeddingSeatingArrangement
-            tableName="Table 8"
-            tableSeats={groups["Table 8"]}
-          />
-          <WeddingSeatingArrangement
-            tableName="Table 9"
-            tableSeats={groups["Table 9"]}
-          />
+        <hr />   */}
+        <div className="pt-8 grid grid-cols-5 gap-6">
+          {Object.keys(groups).map((table, index) => (
+            <div key={index}>
+              <WeddingSeatingArrangement
+                tableName={table}
+                tableSeats={groups[table]}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </>
