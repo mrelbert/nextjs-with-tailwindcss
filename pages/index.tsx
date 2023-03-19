@@ -20,7 +20,7 @@ export default function LandingPage(): JSX.Element {
           Feel free to sit anywhere within your table!
         </div>
         <hr />   */}
-        <div className="pt-8 grid grid-cols-5 gap-6">
+        <div className="pt-8 grid grid-cols-3 gap-6">
           {Object.keys(groups).map((table, index) => (
             <div key={index}>
               <WeddingSeatingArrangement
